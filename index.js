@@ -6,7 +6,7 @@ function main() {
     try {
         // Test hàm encode
         const testData = {
-            queryString: "next=https%3A%2F%2Fwww.tiktok.com&token=aK47qn3QbcoE1lOgz24Ln_7zpI3_Yoe6LjqKcL4rysE%3D_my&multi_login=1&did=7546283577668027922&locale=vi-VN&app_language=vi&aid=1459&account_sdk_source=web&sdk_version=2.1.11-tiktokbeta.3&language=vi&verifyFp=verify_mf5o2d0k_s1B9vhOs_zeAb_4ocP_BsJY_6X4tfBCMbz1w&shark_extra=%7B%22aid%22:1459,%22app_name%22:%22Tik_Tok_Login%22,%22channel%22:%22tiktok_web%22,%22device_platform%22:%22web_pc%22,%22device_id%22:%227546283577668027922%22,%22region%22:%22VN%22,%22priority_region%22:%22%22,%22os%22:%22windows%22,%22referer%22:%22https:%2F%2Fwww.tiktok.com%2F%22,%22root_referer%22:%22https:%2F%2Fwww.tiktok.com%2F%22,%22cookie_enabled%22:true,%22screen_width%22:1920,%22screen_height%22:1080,%22browser_language%22:%22vi-VN%22,%22browser_platform%22:%22Win32%22,%22browser_name%22:%22Mozilla%22,%22browser_version%22:%225.0+(Windows+NT+10.0%3B+Win64%3B+x64)+AppleWebKit%2F537.36+(KHTML,+like+Gecko)+Chrome%2F139.0.0.0+Safari%2F537.36%22,%22browser_online%22:true,%22verifyFp%22:%22verify_mf5o2d0k_s1B9vhOs_zeAb_4ocP_BsJY_6X4tfBCMbz1w%22,%22app_language%22:%22vi-VN%22,%22webcast_language%22:%22vi-VN%22,%22tz_name%22:%22Etc%2FGMT-7%22,%22is_page_visible%22:true,%22focus_state%22:true,%22is_fullscreen%22:false,%22history_len%22:2,%22user_is_login%22:false,%22data_collection_enabled%22:false%7D&msToken=NRQuWK0avmHABSRK9tbS7TZNklGoLmmtLRorowiI1cD2DwdhO6BYXDG1yLLHHmvDyUev_fC_QRyjdcFI2PFw3V19KiDGqfxQNWR0GRccNL0IxkCzDdsGXvXCOz31Amyf888mE8a-eSlAer9EPB7i",
+            queryString: "WebIdLastTime=1757267548&aid=1988&app_name=tiktok_web&browser_language=vi-VN&browser_name=Mozilla&browser_online=true&browser_platform=Win32&browser_version=5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F139.0.0.0%20Safari%2F537.36&channel=tiktok_web&cookie_enabled=true&data_collection_enabled=true&device_id=7547406633572550152&device_platform=web_pc&focus_state=true&from_page=user&history_len=12&is_fullscreen=false&is_page_visible=true&language=vi-VN&locateItemID=7544735011992243474&needAudienceControl=true&odinId=7097957805269844994&os=windows&priority_region=VN&region=VN&root_referer=https%3A%2F%2Fwww.tiktok.com%2F&screen_height=1080&screen_width=1920&secUid=&tz_name=Etc%2FGMT-7&uniqueId=jle1985&user=%5Bobject%20Object%5D&user_is_login=true&verifyFp=verify_mf9zq5ks_nZJtS1lC_YYZX_4f1U_8P5b_BuKotyxvYuTq&webcast_language=vi-VN&msToken=WCbFJ6EFY0tJg9cNtkLh2oYcJjFiim2WUb6Xwgj6gjg-RGwNq5MZ2e0Q9uLK2XpKWuEH5G-Ja8UcI3gjgG0RGCFGG2xlfkC5sZeiOA28EkiRG0h5iECefo2ip3MotRJXQKkN2X0xI0wKHkBmlkY=",
             body: "",
             userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
         };
@@ -15,9 +15,17 @@ function main() {
         console.log('Kết quả encode:', encodeResult);
 
         // Test hàm decode
-        const encoded = 'M8LEWw7nt-9S6G71ldfPOkz1rpZr3OA3aIu73lg2RF4v-ULnkLEcI6aTUuB2bUhv3dBa02Z1tcLb6yRcngSoV7wsVVEzf4fx/VzNCXGX1hc2OoL/2YkOTYllcMyfMFYLSv-qgXT2B3Hfj-rtP9JoYWGnPIr0ijyaMtw/eGxjmIChuQ5s4FUtDOyHvdBVjHD1gUsH6i1/WR11NXNwjXZAIRzjd2kxigSsCmJGKi-gwD4GqeKcj1N06zAxlHgE1JG-lBsk-89JFDS/YQl--68Vj17rY1-VzHicoU-WRxr8-JAF';
+        // const encoded = 'MPtfbpXGX-IKsSybpg1gHDH-Z4QbEYaaAoS1Dccoe7RIalC1dh-SO9rzclzYrKAjo-xM/jqFlJs2Ppm/Nd-MvflN-mJEC0MPhAoAAfvLzv1n-RbjAPzRutCyPu-Sx65-4ElCXv0c96pZcbgso7MbEnPhsRzuc6x0l02iqJeazFiVAO4S9TX9gckeHq4w57b5jKMkrp9UKCzWO4TiGPwHth566cDJs2pS0t5Kr8s9bxNTqDKqRng0K3mFE-o0jkJVInR1nb6dJdNV';
+        const encoded = encodeResult
         const decodedResult = decode(encoded);
         console.log('Kết quả decode:', decodedResult);
+
+        const encoded1 = 'MwkyLpyck3Ow0cg6Z52V9xxyTPDoEjYcqZ4olx192WQ1yFaLEHmtISET-vG-REojE1oRfqdXsUUKEfZOo8NVPGo22lfGHT1-Ob8Fq/m7O-6ojYN2qen3p745cZt/3J1BRjWcW2VfzcMz88P5qZppo2D3rT1KVXrzJ7HHUBRs6TQtMkRuFuFCtAzkYEBjwtkDjM40WdNhPqGBp9p5sZ7LN1W0Ud18T4xGMxzto85HAhTsh9cdC4kWv9VtBb4F3B2JYHNiiVDuv08PQ0svgKlyhKMIMAx40WdZdWw1QIZxE/vt';
+        const decodedResult1 = decode(encoded1);
+        console.log('Kết quả decode:1', decodedResult1);
+
+
+
     } catch (error) {
         console.error('Có lỗi xảy ra:', error.message);
     }
